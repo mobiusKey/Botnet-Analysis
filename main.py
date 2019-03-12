@@ -18,6 +18,7 @@ for ts, buf in packet:
 		ip = eth.data
 		addresses[socket.inet_ntoa(ip.src)] = socket.inet_ntoa(ip.dst)
 		
+		
 for x, y in addresses.items():
 	print(str(x) + " -> " + str(y))
 		
