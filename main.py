@@ -18,16 +18,37 @@ for ts, buf in packet:
 		ip = eth.data
 		addresses[socket.inet_ntoa(ip.src)] = socket.inet_ntoa(ip.dst)
 		
-		
-for x, y in addresses.items():
-	print(str(x) + " -> " + str(y))
-		
 
-for x in addresses:
-	url = 'http://www.geoip-db.com/json/{0}'.format(x)
-	response = urlopen(url)
-	data = json.load(response)
-	addresses[x] = data
+def getInput():
+	while(True):
+		answer = input("|>")
+		answer = answer.lower()
+		if answer is None or "help in answer":
+			help()
+		if "print" in answer:
+			if "addresses" in answer:
+				printAddresses()
+			if "location" in answer:
+				printLocations()
+				
+def help():
+	print("TODO: add help")
 	
-for x, y in addresses.items():
-	print(str(x) + ": " + str(y["country_name"]))
+def printAddresses():
+	for src, dst in addresses.items():
+		print(str(src) + " -> " + str(dst))
+		
+def getLocations():
+	print("getting locations...")
+	for x in addresses:
+		url = 'http://www.geoip-db.com/json/{0}'.format(x)
+		response = urlopen(url)
+		data = json.load(response)
+		locations[x] = data
+
+def printLocations():
+	getLocations()
+	for x, y in locations.items():
+		print(str(x) + ": " + str(y["country_name"]))
+
+getInput()
