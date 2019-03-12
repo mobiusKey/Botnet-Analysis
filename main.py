@@ -1,8 +1,19 @@
+
+# install dpkt 
+# to install basemap on windows I had to use anaconda as the whl file for windows did not work
+# conda install proj4
+# conda create --name TEST python=3.7
+# conda activate TEST
 import dpkt 
 import os, sys
+#Environment variable is needed to import Basemap
+os.environ["PROJ_LIB"] = "C:\\Users\\standard\\Anaconda3\\pkgs\\proj4-5.2.0-hfa6e2cd_1001\\Library\\share"
+from mpl_toolkits.basemap import Basemap
 import socket
 from urllib.request import urlopen
 import json
+
+
 
 file = open('botnet-capture-20110815-fast-flux.pcap', 'rb')
 
