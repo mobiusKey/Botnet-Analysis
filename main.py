@@ -23,8 +23,8 @@ addresses = {}
 locations = {}
 
 all_addresses = []
-all_sources = []
-all_destinations = []
+# all_sources = []
+# all_destinations = []
 
 # ts is the timestamp and buf contains everything else
 for ts, buf in packet:
@@ -94,6 +94,18 @@ def drawMap():
 			ip, lat, lon = loc
 			xpt, ypt = map(lon, lat)
 			map.plot(xpt, ypt, 'co', markersize=8)
+			for idx, val in enumerate(coordinates):
+				if addresses[ip] in val:
+					dst_ip, dst_lat, dst_lon = coordinates[idx]
+					dst_x, dst_y = map(dst_lon, dst_lat)
+					map.plot(dst_x, dst_y, 'co', markersize=8)
+					xs = []
+					ys = []
+					xs.append(xpt)
+					xs.append(dst_x)
+					ys.append(ypt)
+					ys.append(dst_y)
+					map.plot(xs, ys, color='r', linewidth=3)
 
 		plt.show()
 	else:
