@@ -13,7 +13,7 @@ import socket
 from urllib.request import urlopen
 import json
 import matplotlib.pyplot as plt
-
+import matplotlib.patches as patches
 
 file = open('botnet-capture-20110815-fast-flux.pcap', 'rb')
 
@@ -86,6 +86,7 @@ def drawMap():
 				coordinates.append([ip, loc_data["latitude"], loc_data["longitude"]])	
 				
 		fig = plt.figure(figsize=(10, 8), edgecolor='w')		
+		ax = plt.axes()
 		map = Basemap(projection='mill', llcrnrlat = -90, llcrnrlon = -180, urcrnrlat = 90, urcrnrlon = 180, resolution='l')
 		map.drawcoastlines()
 		map.drawcountries(linewidth=2)
@@ -99,14 +100,8 @@ def drawMap():
 					dst_ip, dst_lat, dst_lon = coordinates[idx]
 					dst_x, dst_y = map(dst_lon, dst_lat)
 					map.plot(dst_x, dst_y, 'co', markersize=8)
-					xs = []
-					ys = []
-					xs.append(xpt)
-					xs.append(dst_x)
-					ys.append(ypt)
-					ys.append(dst_y)
-					map.plot(xs, ys, color='r', linewidth=3)
-
+					
+					ax.arrow(xpt, ypt, (dst_x - xpt), (dst_y - ypt), color='r', lw=3, head_width=50000)
 		plt.show()
 	else:
 		getLocations()
