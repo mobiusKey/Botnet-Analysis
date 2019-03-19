@@ -1,4 +1,5 @@
 
+
 # install dpkt 
 # to install basemap on windows I had to use anaconda as the whl file for windows did not work
 # conda install proj4
@@ -14,14 +15,15 @@ from urllib.request import urlopen
 import json
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
+import math
 
 file = open('botnet-capture-20110815-fast-flux.pcap', 'rb')
 
 packet = dpkt.pcap.Reader(file)
 
-addresses = {}
+addresses = []
 locations = {}
-
+arrow_size = 250000
 all_addresses = []
 # all_sources = []
 # all_destinations = []
@@ -31,13 +33,14 @@ for ts, buf in packet:
 	eth = dpkt.ethernet.Ethernet(buf)
 	if isinstance(eth.data, dpkt.ip.IP):
 		ip = eth.data
-		addresses[socket.inet_ntoa(ip.src)] = socket.inet_ntoa(ip.dst)
+		if [socket.inet_ntoa(ip.src), socket.inet_ntoa(ip.dst)] not in addresses:
+			addresses.append([socket.inet_ntoa(ip.src), socket.inet_ntoa(ip.dst)])
 		
-for src, dst in addresses.items():
-	if src not in all_addresses:
-		all_addresses.append(src)
-	if dst not in all_addresses:
-		all_addresses.append(dst)
+for items in addresses:
+	if str(items[0]) not in all_addresses:
+		all_addresses.append(str(items[0]))
+	if str(items[1]) not in all_addresses:
+		all_addresses.append(str(items[1]))
 
 def getInput():
 	while(True):
@@ -58,8 +61,8 @@ def help():
 	print("TODO: add help")
 	
 def printAddresses():
-	for src, dst in addresses.items():
-		print(str(src) + " -> " + str(dst))
+	for items in addresses:
+		print(str(items[0]) + " -> " + str(items[1]))
 
 		
 def getLocations():
@@ -91,17 +94,28 @@ def drawMap():
 		map.drawcoastlines()
 		map.drawcountries(linewidth=2)
 		map.bluemarble()
-		for loc in coordinates:	
-			ip, lat, lon = loc
-			xpt, ypt = map(lon, lat)
-			map.plot(xpt, ypt, 'co', markersize=8)
-			for idx, val in enumerate(coordinates):
-				if addresses[ip] in val:
-					dst_ip, dst_lat, dst_lon = coordinates[idx]
-					dst_x, dst_y = map(dst_lon, dst_lat)
-					map.plot(dst_x, dst_y, 'co', markersize=8)
-					
-					ax.arrow(xpt, ypt, (dst_x - xpt), (dst_y - ypt), color='r', lw=3, head_width=50000)
+		print("drawing markers...")
+		
+		for cord in coordinates:
+			ip, lat, lon = cord
+			if lon is None or lat is None:
+				continue
+			else:
+				xpt, ypt = map(lon, lat)
+				map.plot(xpt, ypt, 'ro', markersize=8)
+				for idx, loc_entry in enumerate(coordinates):
+					for items in addresses:
+						if items[0] == ip and items[1] == loc_entry[0]:
+							dst_ip, dst_lat, dst_lon = coordinates[idx]
+							if dst_lat is not None:
+								dst_x, dst_y = map(dst_lon, dst_lat)
+								map.plot(dst_x, dst_y, 'ro', markersize=8, zorder=20)
+								if (math.sqrt(((dst_x -xpt)**2) +  ((dst_y -ypt)**2))) != 0:
+									#ax.arrow(xpt, ypt, (dst_x - xpt), (dst_y - ypt), color='r', lw=3, head_width=50000, head_length=50000 * 1.5)
+									ax.arrow(xpt, ypt, (dst_x - xpt), (dst_y - ypt), width=arrow_size, length_includes_head=True, facecolor='c', edgecolor='k', zorder=15)
+									print(str(math.sqrt(((dst_x -xpt)**2) +  ((dst_y -ypt)**2))))
+									
+
 		plt.show()
 	else:
 		getLocations()
