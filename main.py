@@ -27,6 +27,7 @@ arrow_size = 250000
 all_addresses = []
 # all_sources = []
 # all_destinations = []
+	
 
 # ts is the timestamp and buf contains everything else
 for ts, buf in packet:
@@ -57,6 +58,8 @@ def getInput():
 			drawMap()
 		if "exit" in answer:
 			exit()
+		if "info" in answer:
+			info()
 def help():
 	print("TODO: add help")
 	
@@ -120,5 +123,34 @@ def drawMap():
 	else:
 		getLocations()
 		drawMap()
+
+def info():
+	answer = input("enter IP address:")
+	srcs = []
+	dsts = []
+	if len(answer) == 0:
+		for items in addresses:
+			print(str(items[0]) + " -> " + str(items[1]))
+	else:
+		print("IP addresses that send data to " + answer)
+		for val in addresses:
+			if val[1] == answer:
+				srcs.append(val[1])
+				print(val[0])
+		
+		print("IP addresses that receive data from " + answer)
+		for val in addresses:
+			if val[0] == answer:
+				dsts.append(val[0])
+				print(val[0])
+		print("Countries that accessed " + answer)
+		src_countries = []
+		for ips, loc_data in locations.items():
+			if ips in srcs:
+				if ips not in src_countries:
+					src_countries.append(loc_data["country_name"])
+					
+		for countries in src_countries:
+			print(countries)
 
 getInput()
