@@ -1,7 +1,7 @@
 
 import csv
 
-# ip : [ [ports] [# of packets sent] [# of packets received] [bytes sent] [bytes received] then country and malicous ]
+# ip : [ ports, # of packets sent, ,# of packets received, bytes sent, bytes received, then country and malicous ]
 data = {}
 
 def checksrc(row):
