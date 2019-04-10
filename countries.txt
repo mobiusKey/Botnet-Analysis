@@ -1,0 +1,195 @@
+147.32.84.165: Czechia
+147.32.84.255: Czechia
+147.32.80.9: Czechia
+74.125.232.195: United States
+224.0.0.22: Not found
+239.255.255.250: Not found
+94.63.149.150: Portugal
+94.63.149.152: Portugal
+94.63.150.52: Portugal
+60.190.223.75: China
+195.88.191.59: Not found
+94.63.150.63: Portugal
+80.191.187.36: Iran
+98.154.67.160: United States
+95.134.172.70: Ukraine
+109.200.239.148: Ukraine
+112.205.182.117: Philippines
+178.133.119.252: Ukraine
+82.103.123.207: Bulgaria
+117.197.22.127: India
+117.199.114.136: India
+210.212.164.162: India
+147.32.84.171: Czechia
+124.125.21.140: India
+125.99.28.64: India
+112.205.111.114: Philippines
+115.98.215.108: India
+117.204.64.132: India
+46.175.169.64: Belarus
+188.230.64.18: Ukraine
+79.132.91.208: Latvia
+133.6.157.199: Japan
+115.97.135.112: India
+91.220.0.52: Poland
+89.34.90.20: Romania
+1.22.16.143: India
+58.252.109.240: China
+208.84.201.167: Saint Vincent and the Grenadines
+117.96.96.152: India
+119.154.117.193: Pakistan
+117.207.7.56: India
+85.130.81.228: Bulgaria
+211.140.47.197: China
+77.127.115.133: Israel
+49.128.164.249: India
+61.178.56.36: China
+67.195.168.31: United States
+61.150.114.216: China
+212.117.171.138: Luxembourg
+182.72.80.42: India
+190.77.235.75: Venezuela
+86.101.54.123: Hungary
+89.46.59.46: Romania
+27.255.59.59: Pakistan
+110.34.38.106: Pakistan
+74.3.164.222: Canada
+209.236.119.101: United States
+118.34.142.43: South Korea
+77.127.115.2: Israel
+116.73.89.104: India
+27.255.59.64: Pakistan
+195.113.232.73: Czechia
+184.106.213.57: United States
+84.229.253.152: Israel
+65.54.165.141: United States
+65.54.186.47: United States
+61.17.216.93: India
+65.54.234.24: United States
+65.54.234.78: United States
+74.3.164.223: Canada
+65.54.186.10: United States
+182.2.117.2: Indonesia
+65.55.16.187: United States
+65.54.165.169: United States
+94.245.116.9: Ireland
+65.55.40.23: United States
+117.204.74.3: India
+89.215.49.24: Bulgaria
+61.17.216.6: India
+203.200.149.141: India
+64.4.56.103: United States
+116.228.139.242: China
+83.211.221.197: Italy
+119.154.54.142: Pakistan
+210.211.186.109: India
+218.93.203.210: China
+178.90.6.143: Kazakhstan
+74.3.164.224: Canada
+202.80.173.5: Singapore
+94.52.57.11: Romania
+190.151.53.33: Chile
+117.204.67.233: India
+163.21.59.10: Taiwan
+192.83.196.69: Taiwan
+82.205.221.102: United Arab Emirates
+65.55.255.9: United States
+59.103.193.24: Pakistan
+64.4.2.109: United States
+180.222.136.3: Afghanistan
+205.188.186.137: United States
+61.89.186.155: Japan
+114.59.51.188: Indonesia
+65.54.234.75: United States
+178.137.128.94: Ukraine
+209.85.148.105: United States
+64.12.175.136: United States
+94.100.176.20: Russia
+220.143.177.200: Taiwan
+113.36.206.49: Japan
+74.125.93.27: United States
+27.255.59.65: Pakistan
+74.125.39.27: United States
+27.251.19.95: India
+59.78.181.188: China
+66.111.4.72: United States
+83.152.81.217: France
+210.211.186.4: India
+216.157.130.15: United States
+95.59.1.63: Kazakhstan
+84.16.230.244: Germany
+82.99.253.2: Iran
+59.162.127.194: India
+46.4.36.120: Germany
+198.32.64.12: United States
+95.58.134.226: Kazakhstan
+77.120.37.254: Ukraine
+202.12.27.33: Japan
+192.58.128.30: United States
+64.4.56.87: United States
+120.63.27.163: India
+112.110.18.151: India
+65.54.186.19: United States
+204.127.217.16: United States
+65.54.165.179: United States
+89.236.212.138: Uzbekistan
+65.54.186.107: United States
+200.29.244.194: Ecuador
+200.29.243.1: Ecuador
+94.245.116.13: Ireland
+65.55.72.7: United States
+209.85.148.147: United States
+41.93.130.4: Ghana
+61.17.129.5: India
+82.206.239.241: None
+218.248.255.243: India
+199.255.211.81: United States
+61.17.216.20: India
+196.46.196.3: Zambia
+64.4.56.23: United States
+65.55.75.231: United States
+221.130.69.202: China
+59.94.194.59: India
+61.17.216.4: India
+92.47.5.149: Kazakhstan
+202.164.57.158: India
+61.17.216.26: India
+184.164.142.139: United States
+41.240.106.5: Sudan
+205.188.186.167: United States
+217.34.4.225: United Kingdom
+194.67.211.76: Russia
+92.87.4.97: Romania
+64.12.168.40: United States
+41.220.18.106: Zimbabwe
+92.47.55.219: Kazakhstan
+178.150.146.54: Ukraine
+218.241.209.6: China
+61.28.22.201: China
+203.84.189.77: Philippines
+121.54.23.246: Philippines
+111.88.31.68: Pakistan
+196.2.13.199: Burundi
+111.92.129.242: Pakistan
+178.123.248.251: Belarus
+85.185.226.13: Iran
+196.205.12.237: Egypt
+180.251.135.144: Indonesia
+95.58.236.6: Kazakhstan
+93.177.158.45: Georgia
+190.204.173.239: Venezuela
+200.206.215.4: Brazil
+88.156.111.111: Poland
+182.177.235.90: Pakistan
+78.58.99.95: Republic of Lithuania
+86.126.237.212: Romania
+109.201.233.98: Bulgaria
+208.84.200.2: Saint Vincent and the Grenadines
+76.96.30.116: United States
+183.83.68.80: India
+117.242.61.2: India
+41.223.57.74: Kenya
+117.204.76.152: India
+60.190.222.152: China
+42.201.161.145: Pakistan
+110.34.38.97: Pakistan

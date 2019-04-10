@@ -40,10 +40,27 @@ with open("botnet.csv", "r") as file:
 			data[destination] = [ports, psent, prec, bsent, brec]
 
 		#print(number)
-
+		
+file = open("countries.txt", 'r')
+for line in file:
+	ip, country = line.split(": ")
+	country, _ = country.split("\n")
+	for key in data:
+		if key == ip:
+			print(data[key])
+			print(country)
+			print(data[key].append(country))
+for key in data:
+	print(data[key])
 			
+file.close()
 
-for ip, value in data.items():
-	ports, psent, prec, bsent, brec = value
-	print("{}: ports -> {} packets sent -> {} packets rec -> {} bytes sent -> {} bytes rec ->{}".format(ip,ports, psent, prec, bsent, brec))
+with open('features.csv', mode='w') as feature_file:
+	data_writer = csv.writer(feature_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+	
+	for ip, value in data.items():
+		if len(value) ==6:
+			ports, psent, prec, bsent, brec, country= value
+			data_writer.writerow([ip, ports, psent, prec, bsent, brec, country])
+
 				

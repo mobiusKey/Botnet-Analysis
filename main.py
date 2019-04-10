@@ -60,6 +60,8 @@ def getInput():
 			exit()
 		if "info" in answer:
 			info()
+		if "get countries" in answer:
+			getCountries()
 def help():
 	print("TODO: add help")
 	
@@ -153,4 +155,8 @@ def info():
 		for countries in src_countries:
 			print(countries)
 
+def getCountries():
+	file = open("countries.txt", 'a')
+	for x, y in locations.items():
+		file.write(str(x) + ": " + str(y["country_name"]) + "\n")
 getInput()
