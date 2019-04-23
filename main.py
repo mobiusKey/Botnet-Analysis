@@ -8,7 +8,7 @@
 import dpkt 
 import os, sys
 #Environment variable is needed to import Basemap
-os.environ["PROJ_LIB"] = "C:\\Users\\standard\\Anaconda3\\pkgs\\proj4-5.2.0-hfa6e2cd_1001\\Library\\share"
+os.environ["PROJ_LIB"] = "C:\\Users\\standard\\Anaconda3\\pkgs\\proj4-5.2.0-ha925a31_1\\Library\\share"
 from mpl_toolkits.basemap import Basemap
 import socket
 from urllib.request import urlopen

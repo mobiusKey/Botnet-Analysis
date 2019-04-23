@@ -16,9 +16,9 @@ def main(num):
 
 	# Baysian Stuff
 
-	from sklearn.naive_bayes import GaussianNB
+	from sklearn.neural_network import MLPClassifier
 
-	model = GaussianNB()
+	model = MLPClassifier(hidden_layer_sizes=(100,4),random_state = num)
 
 	model.fit(X_train, Y_train)
 
@@ -52,7 +52,6 @@ def main(num):
 	plt.xlabel('Predicted label')
 	plt.text(0.5,257.44,'Predicted label')
 	
-
 import time
 
 time_start = time.process_time()

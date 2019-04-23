@@ -16,9 +16,9 @@ def main(num):
 
 	# Baysian Stuff
 
-	from sklearn.naive_bayes import GaussianNB
+	from sklearn.svm import SVC
 
-	model = GaussianNB()
+	model = SVC(kernel='linear')
 
 	model.fit(X_train, Y_train)
 
@@ -51,12 +51,7 @@ def main(num):
 	plt.ylabel('Actual label')
 	plt.xlabel('Predicted label')
 	plt.text(0.5,257.44,'Predicted label')
-	
+	plt.show()
 
-import time
-
-time_start = time.process_time()
-num = 87
+num = 1323
 result = main(num)
-time_elapsed = (time.clock() - time_start)
-print(time_elapsed)
